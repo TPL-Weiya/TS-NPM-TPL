@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": " rm -rf ./lib && tsc",
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx}' --fix",
+    "lint": "eslint . --ext '.js,.jsx,.ts,.tsx' --fix",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,24 @@
   "bugs": {
     "url": "https://github.com/TPL-Weiya/TS-NPM-TPL/issues"
   },
-  "homepage": "https://github.com/TPL-Weiya/TS-NPM-TPL#readme"
+  "homepage": "https://github.com/TPL-Weiya/TS-NPM-TPL#readme",
+  "files": [
+    "lib/**/*"
+  ],
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@types/jest": "^26.0.23",
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "jest": "^27.0.6",
+    "prettier": "^2.3.2",
+    "ts-jest": "^27.0.3"
+  }
 }
